@@ -17,9 +17,10 @@ body {
 }
 
 .grid-square {
-    width: 30px;
-    height: 30px;
+   flex-basis: calc(100% / var(--grid-size));
 
-    box-sizing: border-box;
-    border: 1px solid #ddd;
+   aspect-ratio: 1 / 1;
+
+   box-sizing: border-box;
+   border: 1px solid #ddd;
 }
