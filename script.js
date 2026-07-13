@@ -16,16 +16,21 @@ function createGrid(size) {
         square.classList.add('grid-square');
         
         square.addEventListener('mouseenter', () => {
-            square.style.backgroundColor = 'black';
+            
+            const randomR = Math.floor(Math.random() * 256);
+            const randomG = Math.floor(Math.random() * 256);
+            const randomB = Math.floor(Math.random() * 256);
+            
+            
+            square.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
         });
-
         container.appendChild(square);
     }
 }
 
 // Add an event listener to the button
 resetBtn.addEventListener('click', () => {
-    // Prompt the user for input and convert it to an integer number
+    
     let userSize = parseInt(prompt("Enter a new grid size (Max 100):"), 10);
 
     // Odin requirement: Limit the user input to a maximum of 100
