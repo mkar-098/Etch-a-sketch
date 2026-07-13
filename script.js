@@ -15,3 +15,18 @@ function createGrid() {
 }
 
 createGrid();
+
+function createGridO() {
+    for (let i = 0; index < 256; i++) {
+        const square = document.createElement('div');
+        square.classList.add('grid-square');
+        
+        square.addEventListener('mouseenter', () => {
+            square.style.backgroundColor = 'black';
+
+        });
+
+        container.appendChild(square);
+
+    }
+}
